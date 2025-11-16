@@ -3,145 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golden Attempt – Coming Soon</title>
+<title>Golden Attempt - Coming Soon</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+    :root {
+        --gold: #D4AF37;
+        --black: #000;
+        --bg: #FAF8F2;
+    }
+
     body {
         margin: 0;
+        padding: 0;
         font-family: 'Poppins', sans-serif;
-        background: #faf7f2;
-        color: #111;
+        background: var(--bg);
+        color: var(--black);
+        animation: fadeIn 1s ease-in-out;
     }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
     .container {
-        max-width: 1200px;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 60px 20px;
-        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+        padding: 70px 20px;
+        gap: 40px;
     }
-    .left, .right {
-        flex: 1;
-        min-width: 300px;
-        margin: 20px;
+
+    /* Mobile responsive */
+    @media(max-width: 850px){
+        .container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .right-box {
+            width: 90%;
+        }
     }
-    .brand {
-        font-size: 38px;
-        font-weight: 700;
-    }
-    .brand .golden {
-        color: black;
-    }
-    .brand .attempt {
-        color: #d4af37;
-    }
-    .tagline {
-        margin-top: 8px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .tagline .gold {
-        color: #d4af37;
+
+    h1 span.black { color: var(--black); }
+    h1 span.gold { color: var(--gold); }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 5px;
         font-weight: 600;
     }
-    h1 {
-        font-size: 48px;
-        margin-top: 40px;
-        letter-spacing: 2px;
+
+    .subline {
+        font-size: 18px;
+        margin-bottom: 40px;
     }
-    p {
+
+    .gold-word { color: var(--gold); }
+
+    .heading {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    }
+
+    .desc {
         font-size: 16px;
-        line-height: 1.6;
-        margin-top: 20px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        max-width: 450px;
     }
-    .email-box {
+
+    .right-box {
+        width: 40%;
         background: white;
-        padding: 30px;
-        border-radius: 12px;
+        padding: 25px;
+        border-radius: 14px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
-    input[type=email] {
+
+    input[type="email"] {
         width: 100%;
-        padding: 14px;
-        margin-top: 10px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
+        padding: 12px;
         font-size: 15px;
+        border: 2px solid var(--gold);
+        border-radius: 8px;
+        outline: none;
+        margin-bottom: 15px;
     }
+
     button {
         width: 100%;
-        margin-top: 14px;
         padding: 14px;
-        background: linear-gradient(to right, #d4af37, #f5d97e);
+        background: var(--black);
+        color: white;
         border: none;
         border-radius: 8px;
-        font-size: 16px;
-        color: white;
-        font-weight: 600;
+        font-size: 17px;
         cursor: pointer;
+        transition: 0.3s;
     }
+
+    button:hover {
+        background: var(--gold);
+        color: black;
+    }
+
     .note {
-        margin-top: 12px;
+        margin-top: 10px;
         font-size: 14px;
-        color: #444;
+        color: var(--gold);
     }
-    .follow {
+
+    .insta {
         margin-top: 20px;
-        font-weight: 600;
-        font-size: 15px;
+        font-weight: bold;
+        color: var(--gold);
     }
-    @media (max-width: 900px) {
-        h1 { font-size: 40px; }
-        .brand { font-size: 32px; }
-    }
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
-    
-    <!-- LEFT SIDE -->
-    <div class="left">
-        <div class="brand">
-            <span class="golden">Golden</span> <span class="attempt">Attempt</span>
+
+    <!-- LEFT COLUMN -->
+    <div class="left-box">
+        <h1>
+            <span class="black">Golden</span>
+            <span class="gold">Attempt</span>
+        </h1>
+
+        <div class="subline">
+            Make this attempt your golden <span class="gold-word">attempt</span>
         </div>
 
-        <div class="tagline">
-            Make this attempt your golden <span class="gold">attempt</span>
+        <div class="heading">⭐ COMING SOON</div>
+
+        <div class="desc">
+            <strong>Golden Attempt</strong> is a smart practice platform for CA Foundation & CA Intermediate students.
+            <br><br>
+            We provide all MTP, RTP, and PYQ questions in two powerful formats:
+            <br><br>
+            ✔ Chapter-wise <br>
+            ✔ Attempt-wise <br><br>
+            So you can practice exactly the way you prefer.
         </div>
 
-        <h1>COMING SOON</h1>
-
-        <p>
-            Golden Attempt is a smart-practice platform for CA Foundation & CA Intermediate students.
-            We provide **MTP, RTP, and PYQ questions** in two easy formats:
-        </p>
-
-        <p>
-            ✔ Chapter-wise  
-            ✔ Attempt-wise  
-        </p>
-
-        <p>
-            Follow us on Instagram for updates & launch news:<br>
-            <b>@goldenattempt</b>
-        </p>
+        <div class="insta">Follow us on Instagram: @goldenattempt</div>
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div class="right">
-        <div class="email-box">
-            <h3>Join the Waitlist</h3>
-            <p>Be the first to access Golden Attempt when we launch.</p>
 
-            <!-- Replace FORM ID after creating Formspree form -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Notify Me</button>
-            </form>
 
-            <div class="note">⭐ First 50 users will get FREE subscription.</div>
-        </div>
+    <!-- RIGHT COLUMN (EMAIL FORM) -->
+    <div class="right-box">
+
+        <form action="https://formspree.io/f/mkgnzgjy" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Email will be sent to your inbox -->
+            <input type="hidden" name="_replyto" value="workwithprateeksahu@gmail.com">
+
+            <!-- Redirect after submission -->
+            <input type="hidden" name="_next" value="https://goldenattempt.com/thanks.html">
+
+            <button type="submit">Notify Me</button>
+        </form>
+
+        <div class="note">First 50 users will get free subscription.</div>
     </div>
 
 </div>
