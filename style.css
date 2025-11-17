@@ -1,0 +1,264 @@
+:root {
+    --color-cream-white: #fcfcfc;
+    --color-black: #1a1a1a;
+    --color-golden: #FFD700; /* Standard Gold */
+    --color-subtle-highlight: #fffbe6; /* Lightest gold/cream for background */
+    --color-border: #e0e0e0;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    background-color: var(--color-subtle-highlight);
+    color: var(--color-black);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--color-cream-white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Branding/Logo Text */
+.logo-text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+}
+
+.golden-black {
+    color: var(--color-black);
+}
+
+.golden-color, .sub-line-attempt {
+    color: var(--color-golden);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Subtle golden glow */
+}
+
+/* Main Layout */
+.content-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.left-column, .right-column {
+    flex: 1;
+}
+
+/* Left Column Styling */
+.main-headline {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    color: var(--color-black);
+}
+
+.star-icon {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.sub-line {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: var(--color-black);
+}
+
+.about-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    font-weight: 700;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.feature-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.feature-list li::before {
+    content: '★';
+    color: var(--color-golden);
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0;
+    line-height: 1.5;
+}
+
+.follow-us {
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+.follow-us a {
+    color: var(--color-golden);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.follow-us a:hover {
+    color: #e5b800; /* Darker gold on hover */
+}
+
+/* Right Column: Email Form Styling */
+.email-capture-form {
+    background-color: var(--color-subtle-highlight);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-golden); /* Subtle gold border */
+}
+
+.premium-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px; /* Rounded edges */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.premium-input:focus {
+    border-color: var(--color-golden); /* Golden highlight on focus */
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3); /* Soft golden glow */
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-golden);
+    color: var(--color-black);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+    background-color: #e5b800; /* Darker gold on hover */
+}
+
+.submit-button:active {
+    transform: scale(0.99);
+}
+
+.success-message {
+    color: var(--color-black);
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 215, 0, 0.1); /* Very light gold background */
+}
+
+.hidden {
+    display: none;
+}
+
+.free-subscription-note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--color-black);
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-delay-0 {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.3s;
+}
+
+.fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.6s;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* One column layout on mobile */
+        gap: 40px;
+    }
+
+    .main-headline {
+        font-size: 2.2rem;
+    }
+    
+    .star-icon {
+        font-size: 2rem;
+    }
+
+    .sub-line {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .email-capture-form {
+        padding: 20px;
+    }
+
+    .right-column {
+        order: -1; /* Move email form to the top on mobile */
+    }
+}
